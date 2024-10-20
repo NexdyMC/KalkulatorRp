@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wplaceholder="Rp1000" idth=device-wplaceholder="Rp1000" idth, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+         *  {
+        margin: 0;
+        padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div> 
+    <!-- backgrount / latar belakang -->
+    <header>
+    </header>
+    <main>
+        <div class="main">
+            <div class="content">
+                <h1 style="text-align: center">Menghasilkan</h1>
+                <div class="namaInput" >
+                    <input class="number" type="text"  id="nameInput" placeholder="Nama Lengkap">
+                </div>
+                <div class="ratus">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp100" id="satu">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp200" id="dua">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp500" id="tiga">
+                </div>
+                <div class="rubuan">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp1000" id="empat">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp2000" id="lima">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp5000" id="enam">
+                </div>
+                <div class="sepuluhribu">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp10.000" id="tujuh">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp20.000" id="delapan">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp50.000" id="sembilan">
+                </div>
+                <div class="seratusribu">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp75.000" id="sepuluh">
+                    <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp100.000" id="sebelas">
+        
+                </div>
+                
+                <button onclick="calculator()" id="calculator">Calculator</button>
+            </div>
+            <div class="hasil-calculator">
+                <aside>
+                    <h1>hasil</h1>
+                    <div class="hasil" id="hasil">Rp0</div>
+                </aside>
+                
+                <div id="conten"></div>
+                
+                <textarea id="HasilData"></textarea>
+        
+                <div class="button">
+                 
+                    <button id="Reset" onclick="Reset()"> Reset </button>
+                    <button id="download"> Download </button>
+                    <button id="copy" onclick="copyText()"> Copy </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+    
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
