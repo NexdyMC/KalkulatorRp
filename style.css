@@ -4,7 +4,7 @@
 }
 
 :root {
-    --C: #000000;
+    --C: #fff; /* Teks berwarna putih */
     --bg: #0d1117;
     --A: #171b22;
     --B: #30363d;
@@ -13,11 +13,10 @@
     --blur: blur(5px);
     --pxbtn: 1.2rem;
     --ff: #fff;
-    --inputc: #fff;
+    --inputc: #000; /* Warna latar input putih */
     --btn: #fff;
     --btnRadius: 8px;
     --btn-height: 40px;
-    --inputc: #30363d;
 }
 
 body {
@@ -67,19 +66,19 @@ main {
     display: grid;
 }
 
-.number {
+input {
     width: 100%;
     min-width: 100px;
     max-width: 140px;
-    color: var(--inputc);
+    color: var(--C); 
     margin: 5px;
     height: 20px;
-    background: none;
     border: 2px solid var(--inputc);
     border-radius: 8px;
     padding: 5px;
     outline: none;
     backdrop-filter: var(--blur);
+    background: none;
 }
 
 .button {
@@ -92,7 +91,7 @@ main {
 #Reset,
 #download,
 #copy {
-    background: #189a2e;
+    background-color: #189a2e;
     color: var(--btn);
     width: 100%;
     height: var(--btn-height);
@@ -106,15 +105,15 @@ main {
 }
 
 #Reset {
-    background: #e12d39;
+    background-color: #e12d39;
 }
 
 #copy {
-    background: #0a84ff;
+    background-color: #0a84ff;
 }
 
 #download {
-    background: #189a2e;
+    background-color: #189a2e;
 }
 
 textarea {
