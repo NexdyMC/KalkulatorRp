@@ -73,7 +73,7 @@ header.innerHTML =[
 
         // template textarea //
         const DataTextarea = [
-            ("www.calculator-com.vercel.app")                       + "\n" +
+            ("calculator-rp-lake.vercel.app")                       + "\n" +
             ("name: " + namaInput )                                 + "\n" +
             ("---------------------------------")                   + "\n" +
             (calender + ' - ' + time)                               + "\n" +
