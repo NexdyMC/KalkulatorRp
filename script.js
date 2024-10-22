@@ -1,3 +1,8 @@
+/// ---------- ------------------------------ ----------- ///
+/// ---------- Codingan ini dibuat oleh Nexdy ----------- ///
+/// ----- codingan ini digabungin oleh css dan html ----- ///
+/// ----- ----------------------------------------- ----- ///
+
 const header= document.querySelector("header");
 header.innerHTML =[
     "<nav>" +
@@ -66,9 +71,10 @@ header.innerHTML =[
             (k * 1) 
         ];
 
+        // template textarea //
         const DataTextarea = [
-            ("www.calculatorRp-com.vercel.app")                       + "\n" +
-            ("Nama Lengkap: " + namaInput )                         + "\n" +
+            ("www.calculator-com.vercel.app")                       + "\n" +
+            ("name: " + namaInput )                                 + "\n" +
             ("---------------------------------")                   + "\n" +
             (calender + ' - ' + time)                               + "\n" +
             ("---------------------------------")                   + "\n" +
@@ -87,7 +93,6 @@ header.innerHTML =[
             ("total     : " +xx +     "\t" + ":  " +'Rp'+jumlah )
         ];
         HasilData.value = DataTextarea;
-        HasilData.textContent = DataTextarea ;
         hasil.textContent = 'Rp' + jumlah ; 
 
     };
@@ -121,27 +126,51 @@ header.innerHTML =[
         "</svg>"
     ];
 
-    // function reset 
+    // function reset //
     function Reset() {
         const Reset = document.getElementById("Reset");
+        const input = document.querySelectorAll("input");
         const HasilData = document.getElementById("HasilData");
-        HasilData.innerHTML = "";
+
+        var inputa = input[1]; 
+        var inputb = input[2]; 
+        var inputc = input[3]; 
+        var inputd = input[4]; 
+        var inpute = input[5]; 
+        var inputf = input[6]; 
+        var inputg = input[7]; 
+        var inputh = input[8]; 
+        var inputi = input[9]; 
+        var inputj = input[10]; 
+        var inputk = input[11]; 
+
+        inputa.value = "";
+        inputb.value = "";
+        inputc.value = "";
+        inputd.value = "";
+        inpute.value = "";
+        inputf.value = "";
+        inputg.value = "";
+        inputh.value = "";
+        inputi.value = "";
+        inputj.value = "";
+        inputk.value = "";
         HasilData.value = "";
     }
     
-    // function copytext
+    // function copytext //
     function copyText() {
         const HasilData = document.getElementById("HasilData");
         HasilData.select();
         document.execCommand('copy');
-        alert("text Berhasil Dicopy")
+        alert("text Berhasil Dicopy");
     }
     
-    // function download
+    // function download //
     download.addEventListener('click', () => {
         const calculator = document.getElementById("HasilData").value;
 
-        // fungsi download file
+        // fungsi download file + template download js
         const blob = new Blob([calculator], { type: 'text/plain' }); //type file
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a'); /// membuat elemen a anchor
