@@ -3,13 +3,6 @@
 /// ----- codingan ini digabungin oleh css dan html ----- ///
 /// ----- ----------------------------------------- ----- ///
 
-const header= document.querySelector("header");
-header.innerHTML =[
-    "<nav>" +
-        "<h1>Calculator</h1>" +
-    "</nav>"
-];
-
 /// ---------- function calculator ---------- ///
     function calculator() {
         const namaInput = document.getElementById("nameInput").value;
@@ -73,7 +66,7 @@ header.innerHTML =[
 
         // template textarea //
         const DataTextarea = [
-            ("calculator-rp-lake.vercel.app")                       + "\n" +
+            ("www.calculator-com.vercel.app")                       + "\n" +
             ("name: " + namaInput )                                 + "\n" +
             ("---------------------------------")                   + "\n" +
             (calender + ' - ' + time)                               + "\n" +
@@ -120,7 +113,7 @@ header.innerHTML =[
     copy.style.fill = '#ffffff';
     copy.innerHTML = [
         "<p> Copy </p>" +
-        "<svg xmlns=\"https://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" style=\"transform: ;msFilter:;\">",
+        "<svg xmlns=\"https://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" style=\"transform: msFilter;\">",
             "<path d=\"M20 2H10c-1.103 0-2 .897-2 2v4H4c-1.103 0-2 .897-2 2v10c0 1.103.897 2 2 2h10c1.103 0 2-.897 2-2v-4h4c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2zM4 20V10h10l.002 10H4zm16-6h-4v-4c0-1.103-.897-2-2-2h-4V4h10v10z\">",
             "</path>",
         "</svg>"
