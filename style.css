@@ -1,13 +1,9 @@
-@font-face {
-    font-family: 'zh-cn';
-    src: url(zh-cn.ttf);
-}
 
 :root {
     --C: #fff; /* Teks berwarna putih */
     --bg: #0d1117;
     --A: #171b22;
-    --B: #30363d;
+    --B: #30363d9f;
     --bgurl: url(genshin.jpeg);
     --zh-cn: 'zh-cn';
     --blur: blur(5px);
@@ -17,6 +13,10 @@
     --btn: #fff;
     --btnRadius: 8px;
     --btn-height: 40px;
+}
+@font-face {
+    font-family: 'zh-cn';
+    src: url(zh-cn.ttf);
 }
 
 body {
@@ -38,12 +38,18 @@ body {
 }
 
 header {
+    position: relative;
+    z-index: 1;
     background: none;
     color: var(--ff);
     font-size: 30px;
     backdrop-filter: var(--blur);
     text-align: center;
     padding: 10px;
+    nav {
+        display: flex;
+        justify-content:space-around;
+    }
 }
 
 main {
@@ -96,6 +102,7 @@ input {
     width: 100%;
     height: var(--btn-height);
     padding: 5px;
+    margin: 5px;
     border: none;
     outline: none;
     border-radius: var(--btnRadius);
@@ -106,14 +113,35 @@ input {
 
 #Reset {
     background-color: #e12d39;
+    &:hover{
+        background: #cf1124;
+    }
+    &:active {
+        background: #ab091e;
+        transform: translateY(2px);
+    }
 }
 
 #copy {
     background-color: #0a84ff;
+    &:hover{
+        background: #0250bb;
+    }
+    &:active {
+        background: #054096;
+        transform: translateY(2px);
+    }
 }
 
 #download {
     background-color: #189a2e;
+    &:hover{
+        background: #238636;
+    }
+    &:active {
+        background: #0d731e ;
+        transform: translateY(2px);
+    }
 }
 
 textarea {
@@ -121,6 +149,7 @@ textarea {
     height: 300px;
     outline: none;
     background: none;
+    margin: 5px 0;
     color: var(--ff);
     border-radius: 10px;
     border: 3px solid #30363d;
@@ -133,5 +162,22 @@ textarea {
 
     textarea {
         height: 270px;
+    }
+}
+footer {
+    width: 100%;
+    height: 85px;
+    background: var(--B);
+    place-items: center;
+    text-align: center;
+    display: grid;
+    a {
+        font-size: 2rem;
+        color: #fff;
+        text-decoration: none;
+    }
+    a :hover{
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff;
     }
 }
