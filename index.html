@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculator</title>
     <link rel="stylesheet" href="style.css">
     <style>
          *  {
@@ -13,12 +12,11 @@
     </style>
 </head>
 <body>
-    <div class="background" id="background"></div> 
     <!-- backgrount / latar belakang -->
+    <div class="background" id="background"></div> 
     <header>
         <nav>
             <h1>Calculator RP</h1>
-            
         </nav>
     </header>
     <main>
@@ -26,7 +24,7 @@
             <div class="content">
                 <h1 style="text-align: center">Menghasilkan</h1>
                 <div class="namaInput" >
-                    <input class="number" type="text"  id="nameInput" placeholder="Nama Lengkap">
+                    <input type="text"  id="nameInput" placeholder="Name">
                 </div>
                 <div class="ratus">
                     <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp100" id="satu">
@@ -47,7 +45,7 @@
                     <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp75.000" id="sepuluh">
                     <input class="number" type="text" inputmode="numeric" maxlength="3"   placeholder="Rp100.000" id="sebelas">
                 </div>
-                
+<!-- --- button calculator --- -->
                 <button onclick="calculator()" id="calculator">Calculator</button>
             </div>
             <div class="hasil-calculator">
@@ -57,11 +55,11 @@
                 </aside>
                 
                 <div id="conten"></div>
-                
+<!-- --- tampilan textarea --- -->
                 <textarea id="HasilData"></textarea>
         
+<!-- --- button  --- -->
                 <div class="button">
-                 
                     <button id="Reset" onclick="Reset()"> Reset </button>
                     <button id="download"> Download </button>
                     <button id="copy" onclick="copyText()"> Copy </button>
@@ -76,12 +74,8 @@
 
             </path></svg>
         </a>
-        <h3>Versi 1.5 || By Web - NexdyMC || copyright &copyNexdyProjek 2024</h3>
+        <h3>Versi 1.6 || By Web - NexdyMC || copyright &copyNexdyProjek 2024</h3>
     </footer>
-    <script>
-    
-
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
