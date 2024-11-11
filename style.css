@@ -3,7 +3,7 @@
     --bg: #0d1117;
     --A: #171b22;
     --B: #1b1e21cf;
-    --bg-image: url(genshin.jpeg);
+    --bg-image: url(genshin-night.jpeg);
     --zh-cn: 'zh-cn';
     --pxbtn: 1.2rem;
     --ff: #fff;
@@ -34,7 +34,7 @@
 
 @font-face {
     font-family: 'zh-cn';
-    src: url(../zh-cn.ttf);
+    src: url(zh-cn.ttf);
 }
 
 body {
