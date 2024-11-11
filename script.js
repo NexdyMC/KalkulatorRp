@@ -42,11 +42,17 @@ function calculator() {
     const hasil = document.getElementById("hasil");
     const HasilData = document.getElementById("HasilData");
 
-    const now = new Date();
-    const hari = ["Mingggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-    const formattedDate = `${String(now.getDate()).padStart(2, "0")}/${String(now.getMonth()).padStart(2, "0")}/${now.getFullYear()}`;
-    const formattedTime = `${String(now.getHours()).padStart(2, "0")}:${String(now.getMinutes()).padStart(2, "0")}:${String(now.getSeconds()).padStart(2, "0")}`;
-
+    const out = new Date();
+    const hari = ["Mingggu ", "Senin ", "Selasa ", "Rabu ", "Kamis ", "Jumat ", "Sabtu "]
+    const hours = String(out.getHours()).padStart(2, "0");
+    const minutes = String(out.getMinutes()).padStart(2, "0");
+    const seconds = String(out.getSeconds()).padStart(2, "0");
+    const day = String(out.getDate()).padStart(2, "0");
+    const month = String(out.getMonth()).padStart(2, "0");
+    const year = String(out.getFullYear()).padStart(2, "0");
+    const calender = day + "/" + month + "/" + year;
+    const time = hours + ":" + minutes + ":" + seconds ;
+    
     const jumlah = [
             ( a * 100   ) +
             ( b * 200   ) +
@@ -70,7 +76,6 @@ function calculator() {
         ];
     
     const DataTextarea = [
-
             (document.domain)                                                       + "\n" +
             ("Name : " + namaInput )                                                + "\n" +
             ("-----------------------------------")                                 + "\n" +
@@ -90,9 +95,7 @@ function calculator() {
             ("-----------------------------------")                                 + "\n" +
             ("Total  " + "\t" + ":" + "\t" + xx    + "\t" + " :  "  +'Rp'+jumlah )
         ];
-
         HasilData.value = DataTextarea;
-
         hasil.textContent = 'Rp' + jumlah ; 
 }
 
