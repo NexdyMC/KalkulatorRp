@@ -150,31 +150,40 @@ input {
 }
 
 #calculator,
+
 #Reset,
+
 #download,
+
 #copy {
-    background: var(--btn-green);
     color: var(--btn);
     width: 100%;
     height: var(--btn-height);
+    padding: 5px;
     margin: 2.5px;
     border: none;
+    outline: none;
     border-radius: var(--btnRadius);
-    box-shadow: var(--btn-box-shadow-default);
+    box-shadow: var(--btn-box-shadow-defaut);
     cursor: pointer;
     font-size: var(--pxbtn);
     font-family: var(--zh-cn);
-    transition: var(--transition-all);
+    &:active {
+        box-shadow: var(--btn-box-shadow-active);
+        transform: var(--btn-transform-active);
+    }
 }
 
-#calculator:hover {
+#calculator {
+    background: var(--btn-green);
+    &:hover {
     background: var(--btn-green-hover);
-}
-
-#calculator:active {
+    }
+    &:active {
     background: var(--btn-green-active);
     box-shadow: var(--btn-box-shadow-active);
     transform: var(--btn-transform-active);
+    }
 }
 
 #Reset {
