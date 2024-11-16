@@ -164,7 +164,7 @@ input {
     border: none;
     outline: none;
     border-radius: var(--btnRadius);
-    box-shadow: var(--btn-box-shadow-defaut);
+    box-shadow: var(--btn-box-shadow-default);
     cursor: pointer;
     font-size: var(--pxbtn);
     font-family: var(--zh-cn);
