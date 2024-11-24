@@ -1,35 +1,59 @@
 :root {
-    /* Warna dasar dan elemen */
-    --bg: #0d1117;
+     /* Teks color putih */
+    --bg: #151515;
     --A: #171b22;
-    --B: #1b1e21cf;
-    --bg-image: url(genshin-night.jpeg);
-    --zh-cn: 'zh-cn';
-    --pxbtn: 1.2rem;
-    --ff: #fff;
-    --inputc: #000;
-    --btn: #fff;
-    --btnRadius: 8px;
+    --B: #1e1e1ecf;
+    --c: #000;
+
+    /* umum */
+    --color-fff: #fff;
+    --backdrop-filter: blur(10px);
+    --background-image: url(genshin-night.jpeg);
+
+    /* container */
+    --container-background: #d1d9f910;
+    --container-box-shadow: var(--c) ;
+    --container-border-radius: 16px ;
+    --transition-all: 1s all;
+
+    /* input */
+    --input-color: #fff;
+    --input-border: var(--c); /* Warna latar input putih */
+    --input-box-shadow-defaut: 0 4px 0 var(--input-border);
+    --input-border-radius: 8px;
+    --input-min-width: 100px;
+    --input-max-width: 127px;
+
+    /* button */
+    --btn-width: 100%;
     --btn-height: 40px;
-    --container: #d1d9f917;
-    --btn-green: #189a2e;
-    --btn-green-hover: #238636;
-    --btn-green-active: #0d731e;
-    --btn-red: #e12d39;
-    --btn-red-hover: #cf1124;
-    --btn-red-active: #ab091e;
-    --btn-blue: #0a84ff;
-    --btn-blue-hover: #0556c7;
-    --btn-blue-active: #054096;
-    --btn-transform-active: translateY(2px);
-    --transition-all: 0.9s all;
+    --btn-color: #fff;
+    --btn-font-size: 20px;
+    --btn-border-radius: 8px;
+    --btn-green: #189a2e ;
+    --btn-green-hover: #238636 ;
+    --btn-green-active: #0d731e ;
+    --btn-red: #e12d39 ;
+    --btn-red-hover: #cf1124 ;
+    --btn-red-active: #ab091e ;
+    --btn-blue: #0a84ff ;
+    --btn-blue-hover: #0556c7 ;
+    --btn-blue-active: #054096 ;
+    --btn-transform-active: translateY(3px);
+    --btn-box-shadow-active: 0 3px 0 var(--input-border);
+    --btn-box-shadow-defaut: 0 8px 0 var(--input-border);
+
+    /* textarea */
     --textarea-width: 97.5%;
-    --textarea-height: 305px;
+    --textarea-height: 310px;
     --textarea-font-size: 13.5px;
+    --textarea-border-radius: 10px;
+
+    /* footer */
     --footer-width: 100%;
-    --footer-height: 160px;
-    --btn-box-shadow-default: 0 5px 0 var(--inputc);
-    --btn-box-shadow-active: 0 2px 0 var(--inputc);
+    --footer-height: 190px;
+    --footer-margin: 30px 0  0;
+    --footer-background: var(--B);
 }
 
 @font-face {
@@ -38,219 +62,233 @@
 }
 
 body {
-    font-family: 'zh-cn';
-    color: var(--ff);
-    background: #222325;
+    --font-zh-cn: 'zh-cn';
+    font-family: var(--font-zh-cn);
+    color: var(--color-fff);
+    background: var(--bg);
 }
-
 .background {
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 100vh;
-    background: var(--bg-image) center / cover;
     z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: var(--background-image) center / cover;
 }
-
 header {
-    position: relative;
-    background: none;
-    color: var(--ff);
-    font-size: 30px;
+    color: var(--color-fff);
     text-align: center;
-    padding: 10px;
+    margin: 0 0 10px;
+    font-size: calc(2vw + 16px);
+    padding: 0.3em;
 }
-
-.btn-help {
-    position: fixed;
+.btn-help{
+    position: absolute;
     top: 0;
     right: 0;
     z-index: 3;
     margin: 10px;
-    font-family: var(--zh-cn);
-
+    cursor: pointer;
+    font-family: var(--font-zh-cn);
     a {
-    font-size: 18px;
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    color: #fff;
-    background: none;
-    border: none;
-    outline: none;
-    border-radius: 50%;
+        --none: none;
+        background: var(--none);
+        display: inline-block;
+        outline: var(--none);
+        border: var(--none);
+        border-radius: 50%;
+        color: #fff;
+        height: 30px;
+        width: 30px;
+
+        &:hover {
+            filter: drop-shadow(
+                0 0 8px #2ccffa
+                );
+        }
     }
 }
 main {
     display: grid;
     place-items: center;
 }
-
 .container {
+    position: relative;
     display: flex;
-    margin: 30px 6px;
-    min-height: 480px;
-    max-width: 835px;
-    border-radius: 16px;
-    background: var(--container);
-    box-shadow: 0 0 10px #000;
     padding: 10px;
-    backdrop-filter: blur();
+    margin: 10px 6px 35px;
+    font-size: 20px;
+    width: clamp(480px, auto, 835px);
+               /* min,  width, max  */
+    
+    box-shadow: 0 0 10px var(--container-box-shadow);
+    border-radius: var(--container-border-radius);
+    background: var(--container-background);
+    backdrop-filter: blur(); /* elemen ini mengalami bug pada btn-help */
 }
-
 .calculator {
-    display: flex;
     transition: var(--transition-all);
     opacity: 1;
+    display: flex;
     z-index: 1;
 }
-
 .help {
-    display: grid;
-    padding: 0 10px 0 0;
     position: absolute;
-    transition: var(--transition-all);
     opacity: 0;
+    display: none;
+    font-size: 20px;
+    transition: var(--transition-all);
+    padding: 0 10px 0 0 ;
 }
 .calcuratorA {
+    opacity: 0;
     z-index: -1;
     transition: var(--transition-all);
-    opacity: 0;
 }
-
 .helpA {
+    opacity: 1;
     z-index: 1;
     transition: var(--transition-all);
-    opacity: 1;
     display: block;
 }
 .containerA {
    overflow: auto;
 }
-.menghasilkan{
+/* ----- meghasilkan ----- */
+ul{
     position: relative;
     display: grid;
     padding: 0 10px 0 0 ;
 }
-
 input {
-    width: 100%;
-    min-width: 100px;
-    max-width: 135px;
-    color: var(--ff);
-    margin: 5px;
+    box-shadow: var(--input-box-shadow-defaut);
+    border-radius: var(--input-border-radius);
+    border: 2px solid var(--input-border);
+    min-width: var(--input-min-width);
+    max-width: var(--input-max-width);
+    color: var(--input-color); 
+    background: var(--none);
+    /* backdrop-filter: var(); */
+    outline: var(--none);
+    font-family: var(--font-zh-cn);
+    font-size: 18px;
     height: 20px;
-    border: 2px solid var(--inputc);
-    box-shadow: var(--btn-box-shadow-default);
-    font-family: 'zh-cn';
-    border-radius: 8px;
     padding: 5px;
-    outline: none;
-    background: none;
+    margin: 5px;
 }
-
+/* ----- button styles ----- */
 #calculator,
-
 #Reset,
-
 #download,
-
 #copy {
-    color: var(--btn);
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--btn-green);
+    color: var(--btn-color);
     height: var(--btn-height);
-    padding: 5px;
-    margin: 2.5px;
+    padding: 5px 1em ;
+    margin: 15px 2.5px;
+    flex: 1px;
     border: none;
     outline: none;
-    border-radius: var(--btnRadius);
-    box-shadow: var(--btn-box-shadow-default);
+    border-radius: var(--btn-border-radius);
+    box-shadow: var(--btn-box-shadow-defaut);
     cursor: pointer;
-    font-size: var(--pxbtn);
-    font-family: var(--zh-cn);
+    font-family: var(--font-zh-cn);
+    font-size: var(--btn-font-size);
+
     &:active {
         box-shadow: var(--btn-box-shadow-active);
-        transform: var(--btn-transform-active);
+        transform: translateY(4px);
+        transition-duration: var(--transition-all);
     }
 }
 
-#calculator {
-    background: var(--btn-green);
-    &:hover {
-    background: var(--btn-green-hover);
+/* color hover and active */
+#calculator, #download{
+    &:hover{
+        background: var(--btn-green-hover);
     }
     &:active {
-    background: var(--btn-green-active);
-    box-shadow: var(--btn-box-shadow-active);
-    transform: var(--btn-transform-active);
+        background: var(--btn-green-active);
+        border-radius: ;
     }
 }
-
 #Reset {
     background-color: var(--btn-red);
-    &:hover {
-    background: var(--btn-red-hover);
+    &:hover{
+        background: var(--btn-red-hover);
     }
     &:active {
-    background: var(--btn-red-active);
+        background: var(--btn-red-active);
     }
 }
 #copy {
     background-color: var(--btn-blue);
-    &:hover {
-    background: var(--btn-blue-hover);
+    &:hover{
+        background: var(--btn-blue-hover);
     }
     &:active {
-    background: var(--btn-blue-active);
+        background: var(--btn-blue-active);
     }
 }
-#download {
-    background-color: var(--btn-green);
-    &:hover {
-    background: var(--btn-green-hover);
-    }
-}
-
 textarea {
-    resize: none;
-    font-family: 'zh-cn';
+    padding: 3px;
+    margin: 5px 0;
+    resize: var(--none);
+    outline: var(--none);
+    color: var(--color-fff);
+    background: var(--none);
+    border: 3px solid var(--A);
     width: var(--textarea-width);
     height: var(--textarea-height);
-    margin: 5px 0;
-    color: var(--ff);
-    border-radius: 10px;
+    font-family: var(--font-zh-cn);
     font-size: var(--textarea-font-size);
-    border: 3px solid var(--A);
-    outline: none;
-    background: none;
-    padding: 3px;
+    border-radius: var(--textarea-border-radius);
 }
 
 footer {
-    display: grid;
-    place-items: center;
-    width: var(--footer-width);
+    background: var(--footer-background);
     height: var(--footer-height);
-    background: var(--B);
+    margin: var(--footer-margin);
+    width: var(--footer-width);
+    place-items: center;
     text-align: center;
-}
-
-footer a {
-    color: #fff;
-    text-decoration: none;
-    
-    &:hover {
-    filter: drop-shadow(0 0 3px #fff);
+    font-size: 16px;
+    display: grid;
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
+        outline: none;
+        &:hover {
+            filter: drop-shadow(
+                    0 0 10px #2ccffa
+                    );
+        }
     }
 }
+/* scrollbar */
+::-webkit-scrollbar{
+    width: 1px; 
+    height: 1px; 
+    backdrop-filter: blur(20px);
+}
+::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:active{
+    background: #a1a1a1;
+    border-radius: 10px;
+}
 
-/* Responsive */
 @media (max-width: 700px) {
     .calculator {
         display: grid;
     }
-
     textarea {
-        height: 310px;
+        height: 330px;
     }
 }
