@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Calculator Rp</title>
     <style>
          *  {
         margin: 0;
@@ -14,9 +13,8 @@
     </style>
 </head>
 <body>
+        <!-- backgrount / latar belakang -->
     <div class="background" id="background"></div> 
-    <!-- backgrount / latar belakang -->
-
     <header>
         <nav>
             <h1>Calculator RP</h1>
@@ -33,6 +31,7 @@
                         </path>
                     </svg>
                 </a>
+
                 <!-- </button> -->
             </span>
             <div class="calculator" id="display">
@@ -42,12 +41,14 @@
                         <input type="text" id="nameInput" placeholder="Name">
                     </ol> 
                     <ol>
+
                         <!-- ratusan -->
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp100" id="satu" >
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp200" id="dua"  >
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp500" id="tiga" >
                     </ol>
                     <ol>
+
                         <!-- ribuan -->
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp1000" id="empat" >
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp2000" id="lima"  >
@@ -55,29 +56,35 @@
                     </ol>
                     <ol>
                         <!-- sepuluh ribu -->
+
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp10.000" id="tujuh"   >
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp20.000" id="delapan" >
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp50.000" id="sembilan">
                     </ol>
                     <ol>
+
                         <!-- seratus ribu -->
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp75.000" id="sepuluh"  > 
                         <input type="text" inputmode="numeric" maxlength="3"   placeholder="Rp100.000" id="sebelas" >
                     </ol>
                     <!-- meghasilkan -->
+
                     <button onclick="calculator()" id="calculator">Calculator</button>
                 </ul>
+
                 <ul>
                     <ol>
                         <h2>hasil</h2>
+
                         <span class="hasil" id="hasil">Rp 0</span>
                     </ol>
+                    
                     <!-- hasil jumlah -->
                     <div id="conten"></div>
 
                     <!-- menampilkan hasil hitungan -->
                     <textarea id="HasilData" disabled></textarea>
-            
+                    
                     <!-- semua button yang membantu -->
                     <ol style="display: flex; justify-content: end; ">
                         <button id="Reset" onclick="Reset()">Reset</button>
@@ -88,6 +95,7 @@
             </div>
             
             <div class="help" id="help">
+
                 <h2>Help ?</h2>
                 <h3>Tips Penggunaan</h3>
                 <p>1. Isi nama kamu di kotak paling atas (bebas nama apa aja).
@@ -96,16 +104,16 @@
                 <p>2. Masukkan jumlah uang yang kamu punya. contoh jika kamu punya 5 lembar uang 2000, tulis angka 5 pada kotak tersebut.
                 </p>
                 <input type="text" value="5" disabled style="margin: 10px 0;" >
-                <p>3. jika sudah, click tombol hijau "calcurator" hasilnya akan menamilkan jumlah uang dan hasil dari hitungan Calcurator 
+                <p>3. jika kalian sudah click tombol hijau "calculator", website ini akan menampilkan hasil dari uang yang anda jumlahkan, Dan website ini juga akan secara otomatis menampilkan data hasil dari uang yang kalian jumlahkan 
                 </p>
                 <button id="calculator" style="width: 300px; margin: 10px 0;" disabled >Calculator</button>
                 <br>
-                <h3>Button yang harus dipahami</h3>
-                <p>1. Reset : fungsinya menghapus jumlah mata uang yang sudah terisi</p>
-                <p>2. Download : berguna untuk mengdownload/mengunduh hasil hitungan mata uang yang sudah ditampilkan di layar kiri atau bawah 
+                <h3>tombol Tambahan</h3>
+                <p>1. Reset : menghapus jumlah mata uang yang sudah terisi kecuali nama input pada bagian atas</p>
+                <p>2. Download : mengunduh hasil hitungan mata uang yang sudah ditampilkan di layar kiri atau bawah 
                    (type file nya berupa .txt dengan nama tanggal dan nama website nya).
                 </p>
-                <p>3. Copy : selain download, kamu juga bisa mengcopy hasil hitungan mata uang yang sudah ada di tampilkan</p>
+                <p>3. Copy : selain download, kamu juga bisa mengcopy hasil hitungan mata uang yang sudah di tampilkan</p>
             </div>
         </div>
     </main>
@@ -117,16 +125,17 @@
                     </path>
                 </svg>
             </a>
-            <br>
+            <br> 
             <ol>
-                <h2> By Web - NexdyMC || V1.7 </h2>
+                <h2>By Web - NexdyMC || V1.8</h2>
                 <h2>Copyright &copyNexdyProjek 2024</h2>
             </ol>
         </ul>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
+
  
+
 <!-- Projek Nexdy Calculator Rp versi 1.7 -->
